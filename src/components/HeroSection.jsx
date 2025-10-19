@@ -29,8 +29,8 @@ const HeroSection = () => {
         >
             <div className="container max-w-4xl mx-auto text-center z-10">
                 <div className="space-y-6">
-                    <h1>Hi I am  <span className="text-primary animate-fade-in-delay-1">Pradnya</span> Hegde</h1>
-                    <h3 id="scramble" className="text-4xl md:text-6xl font-bold tracking-tight">
+                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Hi I am  <span className="text-primary animate-fade-in-delay-1">Pradnya</span> Hegde</h1>
+                    <h3 id="scramble" className="text-2xl md:text-4xl font-bold tracking-tight">
                     </h3>
 
                     <p id="myInfo" className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-1 animate-fade-in-delay-3">

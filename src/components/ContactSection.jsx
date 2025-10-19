@@ -1,12 +1,10 @@
 import {
-    Instagram,
-    Linkedin,
     Mail,
     MapPin,
     Phone,
     Send,
-    Twitch,
-    Twitter,
+    Linkedin,
+    FileDown
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
@@ -106,7 +104,7 @@ const ContactSection = () => {
                     >
                         <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
-                        <form className="space-y-6">
+                        <form className="space-y-6" action="mailto:pradnyahegde@gmail.com" method="post" enctype="text/plain">
                             <div>
                                 <label
                                     htmlFor="name"
