@@ -33,11 +33,11 @@ const HeroSection = () => {
                     <h3 id="scramble" className="text-4xl md:text-6xl font-bold tracking-tight">
                     </h3>
 
-                    <p id="myInfo" className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-1 animate-fade-in-delay-4">
+                    <p id="myInfo" className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-1 animate-fade-in-delay-3">
                         I build interfaces that are both beautiful and functional.
                     </p>
 
-                    <div className="pt-4">
+                    <div className="pt-4 opacity-1 animate-fade-in-delay-4">
                         <a href="#projects" className="cosmic-button">
                             View My Work
                         </a>
