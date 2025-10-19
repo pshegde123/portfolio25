@@ -6,6 +6,8 @@ import ProjectsSection from "../components/ProjectSection"
 import { SkillsSection } from "../components/SkillSection"
 import { StarBackground } from "../components/StarBackground"
 import { ThemeToggle } from "../components/ThemeToggle"
+import Footer from "../components/Footer"
+
 
 const Home = () => {
     return (
@@ -28,6 +30,7 @@ const Home = () => {
             </main>
 
             {/* Footer */}
+            <Footer />
 
         </div>
     )
