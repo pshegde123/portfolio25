@@ -54,12 +54,12 @@ const ContactSection = () => {
                                     <Mail className="h-6 w-6 text-primary" />{" "}
                                 </div>
                                 <div>
-                                    <h4 className="font-medium"> Email</h4>
+                                    <h4 className="font-medium">Email</h4>
                                     <a
-                                        href="mailto:hello@gmail.com"
+                                        href="mailto:pradnyahegde@gmail.com"
                                         className="text-muted-foreground hover:text-primary transition-colors"
                                     >
-                                        hello@gmail.com
+                                        pradnyahegde@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -70,10 +70,10 @@ const ContactSection = () => {
                                 <div>
                                     <h4 className="font-medium"> Phone</h4>
                                     <a
-                                        href="tel:+11234567890"
+                                        href="tel:+14044918263"
                                         className="text-muted-foreground hover:text-primary transition-colors"
                                     >
-                                        +1 (123) 456-7890
+                                        +1 (404) 491-8263
                                     </a>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ const ContactSection = () => {
                                 <div>
                                     <h4 className="font-medium"> Location</h4>
                                     <a className="text-muted-foreground hover:text-primary transition-colors">
-                                        Vancouver, BC, Canada
+                                        Atlanta, GA, USA
                                     </a>
                                 </div>
                             </div>
@@ -93,17 +93,8 @@ const ContactSection = () => {
                         <div className="pt-8">
                             <h4 className="font-medium mb-4"> Connect With Me</h4>
                             <div className="flex space-x-4 justify-center">
-                                <a href="#" target="_blank">
+                                <a href="https://www.linkedin.com/" target="_blank">
                                     <Linkedin />
-                                </a>
-                                <a href="#" target="_blank">
-                                    <Twitter />
-                                </a>
-                                <a href="#" target="_blank">
-                                    <Instagram />
-                                </a>
-                                <a href="#" target="_blank">
-                                    <Twitch />
                                 </a>
                             </div>
                         </div>
