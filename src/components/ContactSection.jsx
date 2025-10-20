@@ -91,7 +91,7 @@ const ContactSection = () => {
                         <div className="pt-8">
                             <h4 className="font-medium mb-4"> Connect With Me</h4>
                             <div className="flex space-x-4 justify-center">
-                                <a href="https://www.linkedin.com/" target="_blank">
+                                <a href="https://www.linkedin.com/in/pradnya-hegde/" target="_blank">
                                     <Linkedin />
                                 </a>
                             </div>
@@ -104,7 +104,7 @@ const ContactSection = () => {
                     >
                         <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
-                        <form className="space-y-6" action="mailto:pradnyahegde@gmail.com" method="post" enctype="text/plain">
+                        <form className="space-y-6" action="mailto:pradnyahegde@gmail.com" method="post" encType="text/plain">
                             <div>
                                 <label
                                     htmlFor="name"

@@ -1,34 +1,37 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import cookup_image from "../assets/cookup.png";
+import gamehub_image from "../assets/game_hub.png";
+import myflix_image from "../assets/myflix.png";
 
 const projects = [
     {
         id: 1,
-        title: "SaaS Landing Page",
-        description: "A beautiful landing page app using React and Tailwind.",
-        image: "/projects/project1.png",
-        tags: ["React", "TailwindCSS", "Supabase"],
-        demoUrl: "#",
-        githubUrl: "#",
+        title: "CookUp",
+        description: "MERN stack CRUD application to create recipes using AI",
+        image: cookup_image,
+        tags: ["React", "Google Gemini API", "NodeJS"],
+        demoUrl: "https://cookupga.netlify.app/",
+        githubUrl: "https://github.com/Mkac0/cook-up-front-end",
     },
     {
         id: 2,
-        title: "Orbit Analytics Dashboard",
+        title: "Game Hub",
         description:
-            "Interactive analytics dashboard with data visualization and filtering capabilities.",
-        image: "/projects/project2.png",
-        tags: ["TypeScript", "D3.js", "Next.js"],
-        demoUrl: "#",
-        githubUrl: "#",
+            "React + TypeScript + Chakra UI App to search Video games loaded using RAWG API.",
+        image: gamehub_image,
+        tags: ["TypeScript", "React", "RAWG API"],
+        demoUrl: "https://game-hub2-khaki.vercel.app/",
+        githubUrl: "https://github.com/pshegde123/game-hub2",
     },
     {
         id: 3,
-        title: "E-commerce Platform",
+        title: "MyFlix",
         description:
-            "Full-featured e-commerce platform with user authentication and payment processing.",
-        image: "/projects/project3.png",
-        tags: ["React", "Node.js", "Stripe"],
-        demoUrl: "#",
-        githubUrl: "#",
+            "NodeJS based CRUD app, which loads popular movies data and allows users to save favorites in their account",
+        image: myflix_image,
+        tags: ["Node.js", "EJS Template", "TMDB API"],
+        demoUrl: "https://myflix-ejs-7ead97899eae.herokuapp.com/",
+        githubUrl: "https://github.com/pshegde123/myflix_crud_app",
     },
 ];
 
@@ -62,8 +65,8 @@ const ProjectsSection = () => {
 
                             <div className="p-6">
                                 <div className="flex flex-wrap gap-2 mb-4">
-                                    {project.tags.map((tag) => (
-                                        <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                                    {project.tags.map((tag, index) => (
+                                        <span key={index} className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
                                             {tag}
                                         </span>
                                     ))}
