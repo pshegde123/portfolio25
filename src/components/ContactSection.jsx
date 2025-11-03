@@ -9,23 +9,42 @@ import {
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
     const { toast } = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        setIsSubmitting(true);
+        const templateParams = {
+            from_name: e.target.name.value,
+            from_email: e.target.email.value,
+            to_name: 'Wizard',
+            message: e.target.message.value,
+        };
 
-        setTimeout(() => {
-            toast({
-                title: "Message sent!",
-                description: "Thank you for your message. I'll get back to you soon.",
-            });
-            setIsSubmitting(false);
-        }, 1500);
+        emailjs.send('service_2fmjcrc', 'template_b3b0avj', templateParams, 'pgWosf3zUhs8YFpyi')
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    setIsSubmitting(true);
+                    setTimeout(() => {
+                        toast({
+                            title: "Message sent!",
+                            description: "Thank you for your message. I'll get back to you soon.",
+                        });
+                        setIsSubmitting(false);
+                    }, 1500);
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
     };
     return (
         <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -104,7 +123,7 @@ const ContactSection = () => {
                     >
                         <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
-                        <form className="space-y-6" action="mailto:pradnyahegde@gmail.com" method="post" encType="text/plain">
+                        <form className="space-y-6" onSubmit={handleSubmit}>
                             <div>
                                 <label
                                     htmlFor="name"
@@ -119,7 +138,7 @@ const ContactSection = () => {
                                     name="name"
                                     required
                                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                                    placeholder="Pedro Machado..."
+                                    placeholder="John Doe..."
                                 />
                             </div>
 
